@@ -10,7 +10,9 @@
         <title>RENAME ME</title>
     </head>
     <body>
-        
+        {% for user in users %}
+        <p>name: {{ user.first_name }}</p>
+        {% endfor %}
 
 
         
