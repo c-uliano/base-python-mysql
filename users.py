@@ -25,8 +25,9 @@ class User:
 
     # CREATE a new user
     @classmethod
-    def create_one(cls):
-        pass
+    def create_one(cls, data):
+        query = "INSERT INTO table_name_here (column_one, column_two, created_at, updated_at) VALUES (%(form_input_name_one)s, %(form_input_name_two)s, NOW(), NOW())"
+        return MySQLConnection("database_name_here").query_db(query, data)
 
     # READ data for one user, display on frontend
     @classmethod
@@ -36,6 +37,7 @@ class User:
     # UPDATE data for one user
     @classmethod
     def update_one(cls):
+        # continue writing this one out
         pass
 
     # DELETE data for one user

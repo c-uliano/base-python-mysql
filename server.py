@@ -10,13 +10,24 @@ def index():
 # add new user form page, CREATE new user
 @app.route('/new') 
 def add_new():
-    # continue to build this out
     return render_template("new.html")
 
 # CREATE new user, POST form data
 @app.route('/new', methods=['POST']) 
 def add_new_form():
-    # continue to build this out
+    User.create_one(request.form)
+    return redirect("/") 
+
+# UPDATE current user form page 
+@app.route('/update/<int:id>') 
+def add_new(id):
+    # continuing writing this out
+    return render_template("update.html")
+
+# UPDATE current user, POST form data
+@app.route('/update', methods=['POST']) 
+def add_new_form():
+    User.update_one(request.form)
     return redirect("/") 
 
 if __name__=="__main__": 
