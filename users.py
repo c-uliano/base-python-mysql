@@ -36,9 +36,10 @@ class User:
 
     # UPDATE data for one user
     @classmethod
-    def update_one(cls):
-        # continue writing this one out
-        pass
+    def update_one(cls, data):
+        query = "UPDATE table_name_here SET column1 = value1 column2 = value2 WHERE id = %(id)s;"
+
+        return MySQLConnection("database_name_here").query_db(query, data)
 
     # DELETE data for one user
     @classmethod
