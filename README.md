@@ -9,3 +9,5 @@
 ## To Do
 - add registrationo and login functionality to these base files
 - add base template for inheritance 
+- install bcrypt
+- add decorator for login check
